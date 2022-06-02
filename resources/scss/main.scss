@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../assets/images/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    .header-slide {
+        transition: all 1s ease;
+    }
+}
+
+.header-contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../assets/images/contact-hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: 400px;
+}
+
+.card-feature {
+    background: radial-gradient(
+        61.74% 61.74% at 50% 50%,
+        #007fbc 0%,
+        #086ca9 44%,
+        #144e8c 100%
+    );
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.card-produk {
+    &:hover .card-produk-detail {
+        background: #144e8ccc;
+    }
+
+    &:hover h5,
+    &:hover a {
+        transform: translateY(0);
+        // display: block;
+    }
+    .card-produk-detail {
+        background: none;
+        transition: all 0.3s ease;
+    }
+
+    h5 {
+        transform: translateY(500px);
+        transition: all 0.5s ease;
+        // display: none;
+    }
+    a {
+        transform: translateY(500px);
+        transition: all 0.7s ease;
+        // display: none;
+    }
+}
+
+progress[value] {
+    height: 10px;
+    &::-webkit-progress-value {
+        background-color: #144e8c;
+        border-radius: 2px;
+    }
+    &::-webkit-progress-bar {
+        background-color: #bfdeff;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+}
+
+.card-testi {
+    min-width: 50%;
+    background: radial-gradient(
+        61.74% 61.74% at 50% 50%,
+        #007fbc 0%,
+        #086ca9 44%,
+        #144e8c 100%
+    );
+    border-radius: 26px;
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    @media screen and (max-width: 425px) {
+        min-width: 100%;
+    }
+}
+
+.card-testi-container::-webkit-scrollbar {
+    display: none;
+}
+
+.news-article {
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.footer {
+    background: linear-gradient(rgba(33, 26, 107, 0.8), rgba(23, 37, 104, 0.8)),
+        url("../assets/images/bg-footer.png");
+}
+
+.input-control {
+    outline: none;
+    padding: 10px 15px;
+    border: 1px solid #387ac2;
+    border-radius: 10px;
+    &:focus {
+        box-shadow: 0px 0px 5px -1px #0055ff;
+    }
+}
+
+.navbar-link {
+    li {
+        position: relative;
+        &::after {
+            transition: all 0.2s ease;
+            display: block;
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 5px;
+            background-color: white;
+            bottom: -40px;
+        }
+
+        &:hover::after {
+            // display: block;
+            width: 100%;
+        }
+
+        &.active-navbar::after {
+            width: 100%;
+        }
+    }
+}
+
+.navbar-mobile {
+    background: radial-gradient(
+        61.74% 61.74% at 50% 50%,
+        #007fbc 0%,
+        #086ca9 44%,
+        #144e8c 100%
+    );
+}
+.show {
+    transform: translateX(0);
+}
