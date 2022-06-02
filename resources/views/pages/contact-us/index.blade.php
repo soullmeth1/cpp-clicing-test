@@ -28,7 +28,7 @@
                 <button class="rounded-lg bg-utama text-white py-3 px-16 md:justify-self-start">SUBMIT</button>
             </div>
 
-            <div class="text-center md:text-left">
+            <div class="text-center flex flex-col gap-2 md:text-left">
                 <h4 class="font-medium mb-2">SHRIMP IMPROVEMENT SYSTEMS</h4>
                 <select class="input-control" name="select">
                     <option selected disabled>Select Option</option>
@@ -40,8 +40,8 @@
                     <i class="border-t md:border-r border-utama"></i>
                     <p class="email">sales@shrimpimprovement.com.sg</p>
                 </div>
-                <div id="map">
-                    <img src="{{ url('assets/images/location.png') }}" alt="Map Image">
+                <div id="map" class="h-64">
+                    {{-- <img src="{{ url('assets/images/location.png') }}" alt="Map Image"> --}}
                 </div>
             </div>
         </section>
@@ -50,16 +50,30 @@
 @endsection
 
 @push('styles')
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
 <style>
     .fb9 {
-      border: 1px solid #3366FF;
-      background-color: #B3C6FF;
-      width:150px;
-      height:30px;
+        border: 1px solid #3366FF;
+        background-color: #B3C6FF;
+        width:150px;
+        height:30px;
     }
-</style>
+    </style>
 @endpush
 
 @push('scripts_head')
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+@endpush
+
+@push('scripts_body')
+    <script>
+        	mapboxgl.accessToken = 'pk.eyJ1IjoibXViYXJvcTkyIiwiYSI6ImNsM25yZjkzNDBoOHMzZGw4eWs4MzNmODYifQ.VjirMRaeC4_GFQ1GW790FQ';
+            const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            center: [106.8296376, -6.3296044], // starting position [lng, lat]
+            zoom: 13 // starting zoom
+            });
+    </script>
 @endpush

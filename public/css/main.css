@@ -602,6 +602,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-10 {
   height: 2.5rem;
 }
+.h-64 {
+  height: 16rem;
+}
 .h-3 {
   height: 0.75rem;
 }
@@ -1356,11 +1359,6 @@ progress[value]::-webkit-progress-bar {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:text-4xl {
