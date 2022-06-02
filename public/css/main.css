@@ -513,10 +513,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -615,14 +611,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4 {
   height: 1rem;
 }
+.h-full {
+  height: 100%;
+}
 .h-72 {
   height: 18rem;
 }
 .h-auto {
   height: auto;
-}
-.h-full {
-  height: 100%;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -645,6 +641,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-10 {
   width: 2.5rem;
 }
+.w-full {
+  width: 100%;
+}
 .w-3 {
   width: 0.75rem;
 }
@@ -656,9 +655,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-28 {
   width: 7rem;
-}
-.w-full {
-  width: 100%;
 }
 .w-36 {
   width: 9rem;
@@ -674,9 +670,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-sm {
   max-width: 24rem;
-}
-.max-w-xl {
-  max-width: 36rem;
 }
 .max-w-md {
   max-width: 28rem;
@@ -732,6 +725,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-6 {
+  gap: 1.5rem;
 }
 .gap-8 {
   gap: 2rem;
@@ -872,10 +868,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
 .pt-8 {
   padding-top: 2rem;
 }
@@ -895,10 +887,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -959,6 +947,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -966,10 +958,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-utama {
   --tw-text-opacity: 1;
   color: rgb(20 78 140 / var(--tw-text-opacity));
-}
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -1263,28 +1251,12 @@ progress[value]::-webkit-progress-bar {
     justify-content: flex-start;
   }
 
-  .md\:justify-end {
-    justify-content: flex-end;
-  }
-
-  .md\:justify-center {
-    justify-content: center;
-  }
-
   .md\:justify-between {
     justify-content: space-between;
   }
 
-  .md\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .md\:gap-0 {
     gap: 0px;
-  }
-
-  .md\:gap-10 {
-    gap: 2.5rem;
   }
 
   .md\:justify-self-start {
@@ -1316,6 +1288,11 @@ progress[value]::-webkit-progress-bar {
     padding: 5rem;
   }
 
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1331,11 +1308,6 @@ progress[value]::-webkit-progress-bar {
     padding-right: 3rem;
   }
 
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
   .md\:pt-0 {
     padding-top: 0px;
   }
@@ -1344,27 +1316,18 @@ progress[value]::-webkit-progress-bar {
     text-align: left;
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
-
-  .lg\:block {
-    display: block;
-  }
 
   .lg\:flex {
     display: flex;
@@ -1372,10 +1335,6 @@ progress[value]::-webkit-progress-bar {
 
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:max-w-xl {
-    max-width: 36rem;
   }
 
   .lg\:max-w-lg {
@@ -1386,16 +1345,12 @@ progress[value]::-webkit-progress-bar {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:justify-center {
-    justify-content: center;
+  .lg\:gap-5 {
+    gap: 1.25rem;
   }
 
   .lg\:gap-10 {
     gap: 2.5rem;
-  }
-
-  .lg\:gap-5 {
-    gap: 1.25rem;
   }
 
   .lg\:px-8 {
@@ -1406,11 +1361,6 @@ progress[value]::-webkit-progress-bar {
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-
-  .lg\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
 
   .lg\:text-4xl {

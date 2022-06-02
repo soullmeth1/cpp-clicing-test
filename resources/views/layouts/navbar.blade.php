@@ -1,8 +1,8 @@
-<section class="border-b border-white py-5 px-4 md:px-10 lg:px-0">
+<section class="border-b border-white py-5 px-4 md:px-10">
     <nav class="flex justify-between items-center container">
         <img src="{{ url('assets/images/logo-sis.png') }}" alt="Hero Image">
 
-        <ul class="hidden navbar-link lg:flex items-center gap-8">
+        <ul class="hidden navbar-link lg:flex items-center gap-6">
             <li class="{{ Route::is('home') ? 'active-navbar' : '' }}"><a href="{{ route('home') }}">Home</a></li>
             <li class=""><a href="#">About</a></li>
             <li class=""><a href="#">Genetic Program</a></li>
